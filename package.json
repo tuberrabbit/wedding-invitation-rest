@@ -21,7 +21,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --port=8090 --title=egg-server-wedding-invitation-rest",
+    "start": "egg-scripts start --port=10080 --title=egg-server-wedding-invitation-rest",
     "stop": "egg-scripts stop",
     "dev": "egg-bin dev --port=8090",
     "debug": "egg-bin debug",
