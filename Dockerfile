@@ -5,6 +5,6 @@ COPY ./ /workspace
 WORKDIR /workspace
 RUN npm i
 RUN chmod +x ./docker-entrypoint.sh
-EXPOSE 10080
+EXPOSE 8090
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
