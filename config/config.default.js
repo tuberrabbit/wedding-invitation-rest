@@ -9,5 +9,13 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  config.sequelize = {
+    dialect: 'postgres',
+    database: 'wedding_invitation',
+    host: '101.132.181.121',
+    port: '10081',
+    username: 'tuber',
+    password: 'ZJ5dG04Nkz743YPn',
+  };
   return config;
 };
