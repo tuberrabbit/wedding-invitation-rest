@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/nocode/nocode_node:latest
+FROM node:latest
 
 COPY ./ /workspace
 
