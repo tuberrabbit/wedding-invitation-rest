@@ -16,6 +16,16 @@ module.exports = appInfo => {
     port: '10081',
     username: 'tuber',
     password: 'ZJ5dG04Nkz743YPn',
+    define: {
+      freezeTableName: true,
+    },
   };
+
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
   return config;
 };
