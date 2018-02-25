@@ -27,5 +27,8 @@ module.exports = appInfo => {
     },
   };
 
+  config.appId = 'wx3c078cd53a7ee056';
+  config.appSecret = '8b75b468cac6ba11d8218b53f8b54feb'
+
   return config;
 };
