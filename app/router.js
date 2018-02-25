@@ -8,4 +8,5 @@ module.exports = app => {
   router.get('/', 'home.index');
   router.get('/user/:openId', 'user.get');
   router.post('/user', 'user.create');
+  router.patch('/user/:openId', 'user.update');
 };

@@ -18,6 +18,15 @@ class UserService extends BaseService {
       attributes: ['openId', 'nickName', 'guest', 'avatarUrl', 'isAccept'],
     });
   }
+
+  async update(openId, user) {
+    const { User } = this.ctx.model;
+    return await User.update({
+      isAccept: user.isAccept,
+    }, {
+      where: { openId },
+    });
+  }
 }
 
 module.exports = UserService;

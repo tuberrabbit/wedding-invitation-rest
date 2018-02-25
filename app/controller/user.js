@@ -16,6 +16,13 @@ class UserController extends BaseController {
     const user = await this.service.user.get(openId);
     return this.returnData({ user });
   }
+
+  async update() {
+    const { openId } = this.ctx.params;
+    const { user } = this.ctx.request.body;
+    await this.service.user.update(openId, user);
+    return this.returnData({ updated: true });
+  }
 }
 
 module.exports = UserController;
