@@ -10,6 +10,14 @@ class UserService extends BaseService {
       avatarUrl: user.avatarUrl,
     });
   }
+
+  async get(openId) {
+    const { User } = this.ctx.model;
+    return await User.find({
+      where: { openId },
+      attributes: ['openId', 'nickName', 'guest', 'avatarUrl', 'isAccept'],
+    });
+  }
 }
 
 module.exports = UserService;

@@ -10,6 +10,12 @@ class UserController extends BaseController {
       created: true
     });
   }
+
+  async get() {
+    const { openId } = this.ctx.params;
+    const user = await this.service.user.get(openId);
+    return this.returnData({ user });
+  }
 }
 
 module.exports = UserController;
