@@ -9,4 +9,5 @@ module.exports = app => {
   router.get('/user/:openId', 'user.get');
   router.post('/user', 'user.create');
   router.patch('/user/:openId', 'user.update');
+  router.post('/wishes', 'wishes.create');
 };
