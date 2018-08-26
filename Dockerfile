@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:8.9.1
 
 WORKDIR /workspace
 COPY package.json /workspace/package.json
