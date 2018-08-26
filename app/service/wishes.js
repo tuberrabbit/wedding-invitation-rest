@@ -1,14 +1,13 @@
 const BaseService = require('./base');
 
 class WishesService extends BaseService {
-  async create(openId, wishes) {
+  async create(name, wishes) {
     const { Wishes } = this.ctx.model;
-    return await Wishes.create({
-      openId,
-      content: wishes.content,
+    return Wishes.create({
+      name,
+      wishes,
     });
   }
-
 }
 
 module.exports = WishesService;

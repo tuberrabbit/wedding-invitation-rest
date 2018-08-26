@@ -1,9 +1,10 @@
 FROM node:latest
 
+WORKDIR /workspace
+COPY package.json /workspace/package.json
+RUN npm i
 COPY ./ /workspace
 
-WORKDIR /workspace
-RUN npm i
 RUN chmod +x ./docker-entrypoint.sh
 EXPOSE 8090
 
